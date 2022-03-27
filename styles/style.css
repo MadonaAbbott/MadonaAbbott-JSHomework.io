@@ -12,7 +12,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(..\ethan-dow-l2tQdtapKX4-unsplash.jpg);
+    background-color: #000000;
+    background-image: url("");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box {
@@ -27,7 +31,7 @@ body {
     padding-top: 1em;
     text-align: center;
     font-size: 26px;
-    color: white;
+    color: gray;
     font-family: sans-serif;
 }
 
