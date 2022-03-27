@@ -1,13 +1,3 @@
-const_ = require('lodash');
-
-// Start your code ***HERE*** =========
-
-// create an array with all possible character types: Uppercase, Lowercase, numbers, and symbols stored in a variable
-
-// create a global variable called "pwLength" with a number between 10 and 18
-
-// Using the above array and password length variable, create a random password using a for loop inside of a function called "addNewPassword" either saved as an arrow function variable or a traditional function
-
 // ========= ⬇ DO NOT TOUCH THIS CODE ⬇ ======
 
 let genBtn = document.getElementById("btnGen");
@@ -19,15 +9,29 @@ genBtn.addEventListener("click", buttonHandler);
 
 // ========= ⬆ DO NOT TOUCH THIS CODE ⬆ ======
 
-// create an array with all possible character types: Uppercase, Lowercase, numbers, and symbols stored in a variable
-const chars = [0123456789 abcdefghijklmnopqrstuvwxyz!@# $ % ^ & * () ABCDEFGHIJKLMNOPQRSTUVWXYZ];
 
+
+//create an array with all possible character types: Uppercase, Lowercase, numbers, and symbols stored in a variable
+let chars = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z',
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+    '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+    '#', '@', '&', '%', '!', '$', '%', '^', '*', '(', ')', '-', '_', '+', '='
+];
 // create a global variable called "pwLength" with a number between 10 and 18
-const pwLength = 12;
+//1st step: Math.random will give me a pseudo-random number between 0 and 1. 2nd step: Subtract maximum number(18) to minimum number(10) and then add 1. 3rd step: multiply Math.random result to the 2nd step result. 4th step: add 10. We need to add 10 to make sure that the result will always have minimum of 10. 5th step: Math.floor will return the largest integer of the result and not include decimals. This will generate numbers between 10 to 18. 
+const pwLength = Math.floor(Math.random() * (18 - 10 + 1) + 10);
 
-// Using the above array and password length variable, create a random password using a for loop inside of a function called "addNewPassword" either saved as an arrow function variable or a traditional function
-function addNewPassword() {
-    for (let i = 0; i < pwLength; i++) {
-        let randomNumber = Math.floor(Math.random() * chars.length);
-    };
+// Using the chars array and password length variable, create a random password using a for loop inside of a function called "addNewPassword" either saved as an arrow function variable or a traditional function
+
+function addNewPassword() { //create an "addNewPassword" function that will generate random passwords with 10 to 18 characters
+    let password = ""; //inside the function, create a "password" variable with empty string value.
+    for (let i = 0; i < pwLength; i++) { //create a "for" loop that will generate the string value of the "password" variable. Let iteration start at 0; iteration will run as long as it's less than "pwLength"; iterate one at a time. The "for" loop properties will run until the "i < pwLength" condition is met.
+        let randomNumber = Math.floor(Math.random() * chars.length); // Multiply the result of Math.random to the returned number of elements in the "chars" array. Math.floor will return the largest integer of the result and not include decimals. Assign that result to the "randomNumber" variable
+        password += chars[randomNumber] // Make the value of "randomNumber" the index of "chars" variable. Then add this to the "password" string value.
+    }
+    return password; //return the "password" variable, now with the value of "chars[randomNumber]" 
 };
+
+// console.log(addNewPassword());
+//console.log(pwLength);
