@@ -35,3 +35,45 @@ function addNewPassword() { //create an "addNewPassword" function that will gene
 
 // console.log(addNewPassword());
 //console.log(pwLength);
+
+
+// ## Bonus instructions
+// 1. Add an alert asking the character limit the user would like to use with a limit of 50 or under. 
+// 2. The alert should print the randomized password with the length specified by the user.
+
+// ## Bonus Acceptance Critera
+// 1. Must start with an alert requiring a character limit of 50 or under with input from user.
+// 2. If the user inputs over 50 characters, then there must be a second alert giving an error message.
+// 3. The alert should start over asking th euser to input their character limit after the error message.
+// 4. Number of characters in returned randomized password must reflect the length specified by user.
+
+
+// let popUpMessage = prompt("Please enter the number of Password you prefer. Minimum of 10. Maximum of 50", "");
+// if (popUpMessage <= 10) {
+//     alert("Password invalid");
+// } else if (popUpMessage > 50) {
+//     alert("Error. Please enter a number minimum of 50.");
+// } else if (popUpMessage <= 50) {
+//     alert("password valid")
+// } else {
+//     alert("Please try again")
+// } //this code is unfinished. Must work on it!
+
+
+
+function popUpTest() {
+
+};
+
+let log = console.log;
+let popUpMessage = prompt("Please enter the number of Password you prefer. Minimum of 10. Maximum of 50", "");
+if (popUpMessage <= 10) {
+    alert("Password invalid");
+} else if (popUpMessage > 50) {
+    alert("Error. Please enter a number minimum of 50.");
+} else if (popUpMessage <= 50) {
+    alert("password valid")
+} else {
+    alert("Please try again")
+} //this code is unfinished. Must work on it!
+log(parseInt(popUpMessage));
