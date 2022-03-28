@@ -48,32 +48,19 @@ function addNewPassword() { //create an "addNewPassword" function that will gene
 // 4. Number of characters in returned randomized password must reflect the length specified by user.
 
 
-// let popUpMessage = prompt("Please enter the number of Password you prefer. Minimum of 10. Maximum of 50", "");
-// if (popUpMessage <= 10) {
-//     alert("Password invalid");
-// } else if (popUpMessage > 50) {
-//     alert("Error. Please enter a number minimum of 50.");
-// } else if (popUpMessage <= 50) {
-//     alert("password valid")
-// } else {
-//     alert("Please try again")
-// } //this code is unfinished. Must work on it!
-
 
 
 function popUpTest() {
-
+    let log = console.log;
+    log(parseInt(popUpMessage));
+    let popUpMessage = prompt("Please enter the number of Password you prefer. Minimum of 10. Maximum of 50", "");
+    if (popUpMessage <= 10) {
+        alert("Password invalid");
+    } else if (popUpMessage > 50) {
+        alert("Error. Please enter a number minimum of 50.");
+    } else if (popUpMessage <= 50) {
+        alert("password valid")
+    } else {
+        alert("Please try again")
+    } //this code is unfinished. Must work on it!
 };
-
-let log = console.log;
-let popUpMessage = prompt("Please enter the number of Password you prefer. Minimum of 10. Maximum of 50", "");
-if (popUpMessage <= 10) {
-    alert("Password invalid");
-} else if (popUpMessage > 50) {
-    alert("Error. Please enter a number minimum of 50.");
-} else if (popUpMessage <= 50) {
-    alert("password valid")
-} else {
-    alert("Please try again")
-} //this code is unfinished. Must work on it!
-log(parseInt(popUpMessage));
