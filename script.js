@@ -50,17 +50,30 @@ function addNewPassword() { //create an "addNewPassword" function that will gene
 
 
 
-function popUpTest() {
-    let log = console.log;
-    log(parseInt(popUpMessage));
-    let popUpMessage = prompt("Please enter the number of Password you prefer. Minimum of 10. Maximum of 50", "");
-    if (popUpMessage <= 10) {
-        alert("Password invalid");
-    } else if (popUpMessage > 50) {
-        alert("Error. Please enter a number minimum of 50.");
-    } else if (popUpMessage <= 50) {
-        alert("password valid")
-    } else {
-        alert("Please try again")
-    } //this code is unfinished. Must work on it!
-};
+// function popUpMessage() {
+
+//     let popUpMessage = prompt("Please enter the number of Password you prefer. Minimum of 10. Maximum of 50", "");
+//     if (parseInt(popUpMessage <= 10)) {
+//         alert("Password invalid");
+//     } else if (parseInt(popUpMessage > 50)) {
+//         alert("Error. Please enter a number minimum of 50.");
+//     } else if (parseInt(popUpMessage <= 50)) {
+//         alert("password valid")
+//     } else {
+//         alert("Please try again")
+//     } //Why is this code working outside, but not inside a function? 
+//     console.log(popUpPassword());
+// };
+
+
+
+let popUpMessage = prompt("Please enter the number of Password you prefer. Minimum of 10. Maximum of 50");
+if (popUpMessage <= 10) {
+    alert("Error. Please enter a number maximum of 10.");
+} else if (popUpMessage > 50) {
+    alert("Error. Please enter a number minimum of 50.");
+} else if (popUpMessage <= 50) {
+    alert("password valid");
+} else {
+    alert("Please try again")
+}; //I need to figure out how to make it generate a password.
